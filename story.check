@@ -1,0 +1,3 @@
+regexp: ruby version: ruby 2\.\d
+regexp: Bundler version \d+\.\d+
+
