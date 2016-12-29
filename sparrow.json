@@ -1,6 +1,7 @@
 {
     "version" : "0.0.1",
     "name" : "ruby-install",
-    "description" : "Install latest stable ruby via RVM"  
+    "description" : "Install latest stable ruby via RVM",
+    "url" : "Install latest stable ruby via RVM"
 }
 
