@@ -4,7 +4,7 @@ Install latest stable ruby via RVM
 
 # INSTALL
 
-    $ sparrow plg install ruby-rvm-install
+    $ sparrow plg install ruby-install
 
 # INSTALL
 
