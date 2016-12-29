@@ -1,9 +1,16 @@
 #set -x
 set -e
 
-/usr/local/rvm/bin/rvm --version 2>/dev/null || echo 'rvm not found'
+if /usr/local/rvm/bin/rvm list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
 
-if /usr/local/rvm/bin list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
+  source /usr/local/rvm/scripts/rvm
+
+  echo ruby version: $(ruby --version)
+
+  bundler --version
+
+  
+else
 
   curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 
@@ -16,14 +23,7 @@ if /usr/local/rvm/bin list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
   echo ruby version: $(ruby --version)
 
   bundler --version
-  
-else
 
-  source /usr/local/rvm/scripts/rvm
-
-  echo ruby version: $(ruby --version)
-
-  bundler --version
 
 fi
 
