@@ -16,7 +16,10 @@ if rvm list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
   
 else
 
+  source /usr/local/rvm/scripts/rvm
+
   echo ruby version: $(ruby --version)
+
   bundler --version
 
 fi
