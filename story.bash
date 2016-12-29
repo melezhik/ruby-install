@@ -1,9 +1,9 @@
 #set -x
 set -e
 
-source /usr/local/rvm/scripts/rvm 2>/dev/null || echo 'rvm not found'
+/usr/local/rvm/bin/rvm --version 2>/dev/null || echo 'rvm not found'
 
-if rvm list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
+if /usr/local/rvm/bin list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
 
   curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
 
