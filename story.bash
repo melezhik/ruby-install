@@ -1,4 +1,4 @@
-set -x
+#set -x
 set -e
 
 if rvm list|grep ruby- | grep '=*' 1>/dev/null 2>&1; then
